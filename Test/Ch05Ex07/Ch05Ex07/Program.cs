@@ -6,7 +6,8 @@ using System.Text;
 namespace Ch05Ex07
 {
     class Program
-    {
+    {   
+        
         delegate double ProcessDelegata(double param1, double param2);
         static double Multiply(double param1, double param2)
         {
