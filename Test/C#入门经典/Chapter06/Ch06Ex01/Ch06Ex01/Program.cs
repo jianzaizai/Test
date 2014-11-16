@@ -5,27 +5,39 @@ using System.Text;
 
 namespace Ch06Ex01
 {
-    //定义委托
-    public delegate void GreetingDelegate(string name);
+
     class Program
     {
-        private static void EnglishGreeting(string name)
+        //delegate关键字指定该定义用于委托
+        delegate double ProcessDelegate(double param1, double param2);
+
+        static double Multiply(double param1, double param2)
         {
-            Console.WriteLine("morning, " + name);
+            return param1 * param2;
         }
-        private static void ChineseGreeting(string name)
+        static double Divide(double param1, double param2)
         {
-            Console.WriteLine("上午好, " + name);
+            return param1 / param2;
         }
-        //接受一个GreetingDelegate类型的方法作为参数
-        private static void GreetPeople(string name, GreetingDelegate MakeGreeting)
-        {
-            MakeGreeting(name);
-        }
+
         static void Main(string[] args)
         {
-            GreetPeople("jay,"  EnglishGreeting);
-            GreetPeople("同学,"  ChineseGreeting);
+            ProcessDelegate process;
+
+            Console.WriteLine("Enter 2 numbers separated with a comma:");
+            string input = Console.ReadLine();
+            int commaPos = input.IndexOf(",");
+            double param1 = Convert.ToDouble(input.Substring(0, commaPos));
+            double param2 = Convert.ToDouble(input.Substring(commaPos + 1, input.Length - commaPos - 1));
+
+            Console.WriteLine("Enter M to multiply or to divide:");
+            input = Console.ReadLine();
+
+            if (input == "M")
+                process = new ProcessDelegate(Multiply);
+            else
+                process = new ProcessDelegate(Divide);
+            Console.WriteLine("Result:{0}", process(param1, param2));
             Console.ReadKey();
         }
     }
