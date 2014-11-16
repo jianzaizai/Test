@@ -10,8 +10,8 @@ namespace Coh07Ex02
         string Name;
         public string Name
         {
-            get { return namespace;}
-            set {namespace = value;}
+            get { return name;}
+            set {name = value;}
         }
         string gender;
         public string gender
@@ -23,14 +23,14 @@ namespace Coh07Ex02
         public int Age
         {
             get {return age;}
-            set {Age = value;}   
+            set {age = 20;}   
         }
         int chinese;
         public int chinese
         {
             get {return chinese;}
             set {chinese = value;}
-}
+        }
         int math;
         public int math
         {
@@ -38,7 +38,24 @@ namespace Coh07Ex02
             set {math = value;}
         }
         int english;
+        public interface english
+        {
+            get {return english;}
+            set {english = value;}
+        }
+        public void SayHi()
+        {
+            console.writeLine("我叫{0},今年{1}岁,是{2}同学",name,age,gender);
+        }
+        public void Score()
+        {
+            int erface sum = 0;
+            int avg = 0;
+            sum = chinese + Math + english;
+            avg = sum / 3;
+            console.WriteLine("我是{0},考试总成绩{1},平均成绩{2}",name,sum,avg)
 
+        }
         static void Main(string[] args)
         {
 
