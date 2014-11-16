@@ -8,7 +8,7 @@ namespace Coh06Ex05
     class Program
     {
         //求平均值
-        int sum = 0;
+         static int sum = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("请输入一个年龄：");
