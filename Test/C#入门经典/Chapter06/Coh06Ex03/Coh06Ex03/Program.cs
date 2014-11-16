@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Coh06Ex03
 {
+    //输入用户密码888888，用while判断正确
     class Program
     {
         static void Main(string[] args)
@@ -17,18 +18,21 @@ namespace Coh06Ex03
             name = Console.ReadLine();
             Console.WriteLine("密码：");
             pwd = Console.ReadLine();
-            if(name != "atm" || pwd "!= 888888");
+
+            if((name != "atm") || (pwd != "888888"))
             {
                 Console.WriteLine("请输入用户名或者密码：");
+                
             }
+
             else
             {
               break;
             }
         }
-       }
-        while(true);
+         while(true);
         Console.WriteLine("输入正确!");
         Console.ReadKey();
     }
+   }
 }
