@@ -9,8 +9,7 @@ namespace Ch05Ex06
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("请输入一连串字母：")；
-                string
+            Console.WriteLine("请输入一连串字母：");
         }
     }
 }

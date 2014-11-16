@@ -9,7 +9,7 @@ namespace Coh06Ex07
     {
         static void Main(string[] args)
         {
-            string[] strArrary = { "我是", "你的", "哥哥" };
+            string[] strArray = { "我是", "你的", "哥哥" };
             Oper(strArray);     //调用函数
             Console.ReadKey();
         }
