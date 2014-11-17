@@ -9,7 +9,17 @@ namespace Ch05Ex06
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("请输入一连串字母：");
+            string myString = "This is a test.";
+            char[] separator = { ' ' };
+            string[] myWords;
+
+            //使用<string>.split转换为string数组，把他指定的位置分开
+            myWords = myString.Split(separator);
+            foreach (string word in myWords)
+            {
+                Console.WriteLine("{0}", word);
+            }
+            Console.ReadKey();
         }
     }
 }
