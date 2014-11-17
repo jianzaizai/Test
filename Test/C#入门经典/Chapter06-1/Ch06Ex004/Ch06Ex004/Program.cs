@@ -17,7 +17,7 @@ namespace Ch06Ex004
 
         static void Main(string[] args)
         { 
-            //Main()定义初始化变量string,Main()把控制权给了Write()
+            //Main()定义初始化变量mystring,Main()把控制权给了Write()
             string myString = "String defined in Main()";
             Write();
             Console.WriteLine("\nNow in Main()");
